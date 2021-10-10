@@ -1,0 +1,86 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="216" Width="298" Background="Gray">
+    <Border Padding="10" BorderBrush="#eee"  BorderThickness="4">
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="textBox1" Padding="2" Background="White"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="73*" />
+                    <ColumnDefinition Width="14*"/>
+                    <ColumnDefinition Width="70*" />
+                    <ColumnDefinition Width="18*"/>
+                    <ColumnDefinition Width="87*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Margin="-12,10,44,-92" RenderTransformOrigin="0.448,0.63" >
+                    <GroupBox Height="92" Margin="10,0,0,0" Background="#eee">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <Button x:Name="one" Content="1" Click="one_Click" Grid.Column="0"/>
+                                <Button x:Name="four" Content="4" Click="four_Click" Grid.Column="1"/>
+                                <Button x:Name="seven" Content="7" Click="seven_Click" Grid.Column="2"/>
+                                <Button x:Name="zero" Content="0" Click="zero_Click" Grid.Column="2"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Margin="0,0,0,-46">
+                                <Button x:Name="two" Content="2" Click="two_Click" Grid.Column="0"/>
+                                <Button x:Name="five" Content="5" Click="five_Click" Grid.Column="1"/>
+                                <Button x:Name="eight" Content="8" Click="eight_Click" Grid.Column="2"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2">
+                                <Button x:Name="three" Content="3" Click="three_Click" Grid.Column="0"/>
+                                <Button x:Name="six" Content="6" Click="six_Click" Grid.Column="1"/>
+                                <Button x:Name="nine" Content="9" Click="nine_Click" Grid.Column="2"/>
+                                <Button x:Name="doubkeZero" Content="00" Click="doubkeZero_Click" Grid.Column="1" Margin="-30,0,0,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.ColumnSpan="3" Margin="0,0,71,-80" RenderTransformOrigin="0.5,0.589" >
+                    <GroupBox Height="92" Margin="30,10,0,0" Background="#eee">
+                        <Grid Height="85" VerticalAlignment="Bottom">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="22*" />
+                                <ColumnDefinition Width="22*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <Button x:Name="plus" Click="plus_Click" Content="+" Height="60"/>
+                                <Button x:Name="dot" Click="dot_Click" Content="." Height="20"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <Button x:Name="minus" Click="minus_Click" Content="-" Height="20"/>
+                                <Button x:Name="multiplication" Click="multiplication_Click" Content="*" Height="20"/>
+                                <Button x:Name="devide" Click="devide_Click" Content="/" Height="20"/>
+                                <Button x:Name="equal" Click="equal_Click" Content="=" Height="20"/>
+                            </StackPanel> 
+                        </Grid>
+                    </GroupBox>
+                </StackPanel>
+                <StackPanel Grid.Column="4" >
+                    <GroupBox Height="47" Margin="30,10,0,0" Background="#eee">
+                   
+                            <StackPanel>
+                                <Button x:Name="clear" Click="clear_Click" Content="C" Height="20"/>
+                            <Button x:Name="clearAll" Click="clearAll_Click" Content="C/A" Height="20"/>
+
+                        </StackPanel>
+                        
+                    </GroupBox>
+                    <Button x:Name="off" Click="off_Click" Content="OFF" Height="30" Margin="28,20,1,0"/>
+                </StackPanel>
+
+
+
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>

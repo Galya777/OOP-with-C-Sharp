@@ -6,43 +6,49 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Registration of materials" Height="835" Width="400">
+         <!--//Here must have border and a stack panel before oppening the grid--> 
+         <!--//Grid must be in the stack pannel, not the opposite--> 
     <Grid>
         <Grid.ColumnDefinitions>
+       <!--//I need three columns for the 3 buttons and the width is not important--> 
             <ColumnDefinition Width="87*"/>
             <ColumnDefinition Width="109*"/>
         </Grid.ColumnDefinitions>
+            <!--//It would be good if buttons were in separate grid--> 
+            <!--//Buttons-->  <!--Buttons are OK but must be putted in the columns--> 
         <Button  Height="20" Width="110" x:Name="Apply" Click="Apply_Click" Content="Apply" HorizontalAlignment="Left" Margin="14,14,0,0" VerticalAlignment="Top"/>
         <Button  Height="20" Width="110" x:Name="Reset" Click="Reset_Click" Content="Reset" HorizontalAlignment="Center" Margin="141,14,141,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button  Height="20" Width="110" x:Name="Refresh" Click="Refresh_Click" Content="Refresh" HorizontalAlignment="Right" Margin="0,14,14,0" VerticalAlignment="Top" Grid.Column="1"/>
         <!--Pulse Properties-->
-        <StackPanel Margin="10,49,0,10" Grid.ColumnSpan="2">
+        <StackPanel Margin="10,49,0,10" Grid.ColumnSpan="2">  <!--//No stack pannel needed--> 
             <TextBlock Text="Pulse Properites" FontWeight="Bold" Height="19"/>
         </StackPanel>
-        <!--Description-->
+        <!--Description--> <!--//No stack pannel needed--> 
         <StackPanel Margin="10,68,0,31" Grid.ColumnSpan="2">
-            <TextBlock Text="Description"/>
+            <TextBlock Text="Description"/> <!--//Sizes of the box are wrong--> 
             <TextBox Height="25" Width="375" BorderBrush="Gray" Margin="2,5,3,5" />
         </StackPanel>
         <!--Status&&Revision-->
-        <StackPanel Margin="14,116,4,41" Grid.ColumnSpan="2">
-
-            <TextBlock Text="Status"/>
+        <StackPanel Margin="14,116,4,41" Grid.ColumnSpan="2"><!--//No stack pannel needed--> 
+<!--//I need grid--> 
+            <TextBlock Text="Status"/> 
             <TextBox Height="25" Width="220" BorderBrush="Gray" Background="#eee" Margin="2,5,0,5" HorizontalAlignment="Left"/>
-        </StackPanel>
-        <StackPanel Margin="14,116,4,54" Grid.ColumnSpan="2">
+        </StackPanel> <!--//No stack pannel needed but Revision and Status are in different stack pannels to be on the same row--> 
+        <StackPanel Margin="14,116,4,54" Grid.ColumnSpan="2"><!--//No stack pannel needed-->
             <TextBlock Text="Revision" HorizontalAlignment="Right" Width="148"/>
             <TextBox Height="25" Width="145" BorderBrush="Gray" Background="#eee" Margin="0,5,3,5" HorizontalAlignment="Right" />
             <!--Part number-->
-            <TextBlock Text="Part number"/>
+            <TextBlock Text="Part number"/> <!--//Only padding is needed for the box-->
             <TextBox Height="25" Width="370" BorderBrush="Gray"  Margin="2,5,0,5" HorizontalAlignment="Left"/>
             <!--Raw material-->
             <TextBlock Text="Raw Material" FontWeight="Bold"/>
-            <TextBlock Text="Material" Margin="0,0"/>
+            <TextBlock Text="Material" Margin="0,0"/>   <!--Use combo box instead of list box-->        
             <ListBox Height="26" Width="370" Background="#eee" Margin="2,5"/>
             <TextBlock Text="Manifacturing Information" FontWeight="Bold" Margin="0,0"/>
             <!--Manifacturing Information-->
             <TextBlock Text="Centers" Margin="0,1"/>
-            <TextBlock Text="Work centers" Margin="0,1"/>
+           <!--Need grid and groupbox and every column must be on separate stack panel-->
+                <TextBlock Text="Work centers" Margin="0,1"/>
             <CheckBox Content="Weld" Margin="0,0,290,0"/>
             <CheckBox Content="Assembly"/>
             <CheckBox Content="Plasma"/>
@@ -73,7 +79,7 @@
         <TextBlock Text="Purchase information" Margin="7,573,211,-553" Grid.ColumnSpan="2" FontWeight="Bold"/>
         <ListBox Height="26" Width="370" Background="#eee" Margin="8,593,14,185" Grid.ColumnSpan="2">
             <TextBlock Text="Rubber"/>
-        </ListBox>
+        </ListBox> 
         <!--Supplier-->
         <TextBlock Text="Supplier Name" Grid.ColumnSpan="2" Margin="7,624,211,-624"/>
         <TextBox BorderBrush="Gray" Margin="7,755,10,6" Grid.ColumnSpan="2" />

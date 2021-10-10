@@ -255,7 +255,9 @@ namespace Calculator
                 result = one* two;
             }
             textBox1.Text =result.ToString();
-            
+            first=sexond;
+            second=0;
+            operation='0';
         }
 
         private void off_Click(object sender, RoutedEventArgs e)

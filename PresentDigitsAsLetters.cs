@@ -10,7 +10,7 @@ namespace week1task5
     {
         static void Main(string[] args)
         {
-            int number= Console.Read();
+            int number= Console.Read(); //shoul be 4-digit number
             for(int i = 0; i < number; ++i)
             {
                 int N = (int)(i * Math.Pow(4, i));

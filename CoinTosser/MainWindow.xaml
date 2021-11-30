@@ -1,0 +1,26 @@
+﻿<Window x:Class="CoinTossing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoinTossing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,-22,2,0">
+        <StackPanel Margin="0,0,304,0">
+            <Grid Height="434" Margin="10,0,-323,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="Toss" Click="Toss_Click" Content="Toss" Margin="10,293,34,48" Grid.Column="0"/>
+                <Image x:Name="coin" Source="oro_800-1.jpg" RenderTransformOrigin="2.046,0.33"  Visibility="Hidden" Margin="-438,33,556,48">
+       
+              </Image>
+                <Image x:Name="toss" Source="lossy-page1-220px-England,_Anne,_1702-1714_-_Guinea_-_1969.204_-_Cleveland_Museum_of_Art.tif.jpg" Visibility="Hidden" Margin="393,49,138,48" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+                </Image>
+            </Grid>
+        </StackPanel>
+        
+    </Grid>
+</Window>
